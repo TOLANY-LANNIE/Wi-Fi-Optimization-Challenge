@@ -47,7 +47,7 @@ def main():
     plot_hotspot_map(hotspots)
 
     # Optimize channels
-    optimized_hotspots, interference_history = optimize_channels(hotspots, max_iterations=50)
+    optimized_hotspots, interference_history = optimize_channels(hotspots, max_iterations=200)
 
     # Plot optimization progress
     plot_optimization_progress(interference_history)
@@ -56,7 +56,7 @@ def main():
     plot_hotspot_map(optimized_hotspots)
 
     # Save optimized hotspots
-    save_hotspots(optimized_hotspots, "optimized_hotspots.pkl")
+    save_hotspots(optimized_hotspots, "hotspots.pkl")
 
 if __name__ == "__main__":
     main()
